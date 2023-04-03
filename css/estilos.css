@@ -1,0 +1,550 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    box-sizing: border-box;
+}
+
+.header{
+    min-height:100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,88,156,0.3),rgba(0,88,156,0.7)), url(../img/banner.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    box-shadow: 0 30px 20px rgba(4, 85, 142, 0.411);
+}
+
+#logo{
+    border-radius: 3.125em;
+    width: 12.5em;
+
+}
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links{
+    flex:1;
+    text-align: right;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display:inline-block;
+    padding: 0.5em 0.75em ;
+    position: relative;
+}
+.nav-links a{
+    color:#fff;
+    text-decoration: none;
+    font-size:1.125em ;
+}
+.nav-links ul li::after{
+    content:'' ;
+    width: 0%;
+    height: 0.125em;
+    background: #f1173b;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+.intro{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    text-align: center;
+}
+.intro h1{
+    font-size: 3.625em;
+}
+.intro p{
+    margin:5% 0 30px 0;
+    font-size: 1.7em;
+    color: #fff;
+    text-align: center;
+}
+nav .fa{
+    display: none;
+}
+
+@media(max-width: 700px){
+    .intro h1{
+        font-size: 1.563em;
+    }
+    .intro p{
+        margin:10% 0 30px 0;
+        font-size: 1.3em;
+        color: #fff;
+        text-align: justify;
+    }
+    .nav-links ul li{
+        display:block;
+    }
+    .nav-links{
+        position:absolute;
+        background: rgb(4, 84, 142);
+        height: 100vh;
+        width: 12.5em;
+        top: 0;
+        right: -12.5em;
+        z-index: 2;
+        text-align: left;
+        transition: 1s;
+    }
+    nav .fa{
+        display: block;
+        color: #fff;
+        margin: 0.625em;
+        font-size: 1.25em;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 0.938em;
+    }
+}
+
+/* Info de la empresa*/
+#extnetflix a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.info{
+    width: 85%;
+    margin:auto;
+    padding-top: 6.25em;
+    text-align: center;
+    display: grid;
+    grid-template-areas: 
+    'info img'
+    'info img';
+}
+.info p{
+    color: #063970;
+    font-size:0.938em ;
+    margin-bottom: 5em;
+    text-align: justify;
+    margin-left: 0px;
+}
+.info h2{
+    color: rgb(6, 118, 187);
+    font-size: 2em;
+    padding: 0.625px;
+    margin-bottom: 0.3em;
+}
+.info-content{
+    grid-area: info;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    margin: 5% 5% 0 2%;
+    justify-content: space-evenly;
+}
+.stats{
+    grid-area: img;
+    margin-top:5%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.graficos{
+    box-sizing: border-box;
+    border-radius: 20%;
+    margin-left: 10%;
+}
+
+.graficos img{
+    height: 15em;
+    display: block;
+    width: 100%;
+    object-fit:contain;
+}
+
+
+@media(max-width: 700px){
+    .info p{
+        color: #063970;
+        font-size: 0.938em;
+        margin-bottom: 3em;
+        text-align: center;
+        text-align: justify;
+    }
+    .info h2{
+        color: rgb(6, 118, 187);
+        font-size: 1.6em;
+        padding: 0.1em;
+        text-align: left;
+        margin-bottom: 0.3em;
+    }
+    .stats{
+        flex-direction: column;
+    }
+    .graficos{
+        margin-bottom: 0.938em;
+    }
+}   
+
+/*---Referencia---*/
+.rfc{
+    margin: 0;
+    width: 100%;
+    height: 10%;
+    background-image: linear-gradient(rgba(0,88,156,0.3),rgba(0,88,156,0.7)), url(../img/banner.png);
+    background-position:bottom;
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    justify-content: flex-end;
+}
+.rfc h1{
+    color: #fff;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.rfc a, #arrow{
+    text-decoration: none;
+    color:rgb(255, 255, 255) ;
+    font-family: 'Nunito', sans-serif;
+    font-size: 2em;
+    font-weight: bolder;
+
+}
+.f-lks{
+    display: inherit;
+    justify-content: flex-end;
+    margin-left: 80%;
+    margin-right: 2%;
+}
+.rfc a:hover{
+    color: rgb(124, 222, 244);
+}
+.datos{
+    display: flex;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    align-items: center;
+}
+.datos li{
+    color: #fff;
+    justify-content: space-between;
+    list-style: none;
+    position: relative;
+    display: inline-block;
+    padding: 0.01em 2em;
+    width:max-content;
+}
+
+
+@media(max-width: 700px){
+    .rfc h1{
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+    .rfc a{
+        font-size: 18px;
+    }
+}
+
+/*-----Tienda-----*/
+.catalogo img{
+    width: 300px;
+}
+.catalogo{
+    margin: 60px auto 3%;
+    width: 1280px;
+    overflow: hidden;
+}
+.catalogo .productos{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+.contenedor{
+    width: 100%;
+    margin:auto;
+    justify-content: center;
+    overflow: hidden;
+}
+.catalogo .contenedor{
+    display:flex;
+    padding: 0;
+    width: 300%;
+    animation: slide 20s infinite alternate ease-in-out;
+}
+@keyframes slide{
+    0% {margin-left: 0;}
+	20% {margin-left: 0;}
+	
+	25% {margin-left: -100%;}
+	45% {margin-left: -100%;}
+	
+	50% {margin-left: -200%;}
+	70% {margin-left: -200%;}
+}
+.productos h3,p{
+    text-align: center;
+}
+.cat-nav{
+    background: #f1173b;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 20px 15px -5px #063970;
+    width: 100%;
+}
+.cat-navlinks{
+    display: flex;
+    width: 1000px;
+    flex-wrap: wrap;
+    height: 90px;
+}
+.cat-navlinks{
+    display: flex;
+    width: 100vw;
+    list-style: none;
+}
+.cat-navlinks li a{
+    display:flex;
+    flex-direction: column;
+}
+.cat-navlinks li{
+    flex-basis: 0;
+    flex-grow: 1;
+    border-right: 1.5px solid #ac8888;
+    position: relative;
+}
+.cat-navlinks .first{
+    border-left: 1.5px solid #ac8888;
+}
+.cat-navlinks a{
+    color:#fff;
+    text-decoration: none;
+    font-size:1.125em ;
+    font-weight: 800;
+}
+.cat-navlinks img{
+    width: 100%;
+}
+.cat-navlinks .imagen{
+    position: absolute;
+    width: 0px;
+    right: 30px;
+    bottom: 0px;
+    z-index: 15;
+}
+.cat-navlinks li a .down{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #f1173b;
+    top: 0%;
+    transition: .4s ease;
+}
+.cat-navlinks li a .text{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    z-index: 10;
+}
+.cat-navlinks li:hover .down{
+    top: 100%;
+    height: 115%;
+}
+.cat-navlinks li:hover{
+    background: #ba5b6b;
+}
+.cat-navlinks li:hover .imagen{
+    top: 100%;
+    right: 0;
+    width: 100%;
+}
+.introcat{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    text-align: center;
+    margin-top: 15%;
+}
+.introcat h1{
+    font-size: 3.625em;
+}
+.introcat p{
+    margin:5% 0 30px 0;
+    font-size: 1.7em;
+    color: #fff;
+    text-align: center;
+}
+
+@media(max-width:700px){
+    .contenedor{
+        justify-content:center;
+    }
+    .productos img{
+        width: 100px;
+        height: 100px;
+    }   
+    .productos{
+        width: 100px;
+        display: block;
+    }
+    .catalogo{
+    display: flex;
+    }
+}
+
+/*-----Contacto-----*/
+.form {
+    width: 85%;
+    justify-content:center;
+    align-self: center;
+    margin: 5% 5% 0 5%;
+    display: flex;
+    text-align: justify;
+    font-size: 1.3vw;
+    border-radius: 1.5%;
+    padding: 1.5%;
+}
+.info-form{
+    border: 3px solid #f1173b;
+    padding: 5.5em 7em;
+    border-radius: 5%;
+    box-shadow: 0 20px 15px -5px rgba(4, 17, 67, 0.813);
+    background-color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 200px;
+    margin: auto;
+}
+.info-form h2{
+    font-size: 2.8vw;
+    margin-bottom: .5em;
+    width: 100%;
+    color: #063970;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+.input-form{
+    display: grid;
+    margin-top: 2.5em;
+}
+.input-form{
+    display: grid;
+    margin-top: 2.5em;
+}
+.input-form input, textarea, .acc-data input{
+    border:none;
+    outline: none;
+    border-bottom: 1px solid #86878767;
+    color: #063970;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#btn{
+    background: #0c4480;
+    color: #fff;
+    border:none;
+    width: 100%;
+    font-size: 1.2em;
+    font-weight: 800;
+    padding: .5em 0;
+    border-radius: .5em;
+}
+    #blur{
+    background: #ffffff;
+    width: 100%;
+    height: 2%;
+    color: #fff;
+}
+
+/*CUENTA*/
+.main{
+    display: flex;
+    justify-content: space-around;
+
+}
+.acceso{
+    grid-area: acc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10%;
+    background-color: #fff;
+    border: 3px solid #f1173b;
+    padding: 4em 4.5em;
+    border-radius: 5%;
+    box-shadow: 0 20px 15px -5px rgba(4, 17, 67, 0.813);
+    text-align: center;
+    display: flex;
+    max-width: 200px;
+    margin: 5%;
+}
+.acceso p{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.logo{
+display: block;
+margin-bottom: 15%;
+}
+#logo-img{
+max-width: 80px;
+object-fit: cover;
+border-radius: 105em;
+}
+#ID{
+    background: #0c4480;
+    color: #fff;
+    border:none;
+    width: 100%;
+    font-size: 1.2em;
+    font-weight: 800;
+    padding: .4em 0;
+    margin: 0;
+    border-radius: .5em;
+}
+.lateral{
+    grid-area: lat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10%;
+    background-color: #fff;
+    border: 3px solid #f1173b;
+    padding: 4em 4.5em;
+    border-radius: 5%;
+    box-shadow: 0 20px 15px -5px rgba(4, 17, 67, 0.813);
+    text-align: center;
+    display: flex;
+    max-width: 200px;
+    margin: 5%;
+}
+.lateral h2{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom:1.5em ;
+}
+.lateral p{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: justify;
+    font-size: small;
+}

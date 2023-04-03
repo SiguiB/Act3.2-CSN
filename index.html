@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuidado con el Tiburon</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-----Header ---->  
+    <section id="top" class="header">
+        <nav> 
+            <a href="index.html"><img id="logo" src="img/logo.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="ocultarMenu()"></i>
+                <ul>
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="/">Cuenta</a></li>
+                    <li><a href="/">Tienda</a></li>
+                    <li><a href="/">Contacto</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="mostrarMenu()"></i>
+        </nav>
+    <div class="intro">
+        <p id="extnetflix">
+        <a href="http://www.youtube.com/watch?v=JkaxUblCGz0&ab_channel=Netflix"><b  style="color: rgb(218, 12, 80);">Click aquí</b> para ir a un video de la plataforma de Netflix</a>.
+        </p>
+    </div>
+    </section>
+    <!----Blur----->
+    <section class="blur">
+        
+    </section>
+    <!----Info de la empresa----->
+    <section class="info">
+        <div class="info-content">
+        <h2>Sobre Nosotros</h2>
+        <p><b>"Cuidado con el Tiburón (CcT)"</b> es un afiliado a la compañía Integradora, la cual se basará en una tienda en línea enfocada principalmente en venta de ropa (playeras, pantalones
+            shorts, interiores y equipo de natación) ya sea una prenda femenina o masculina. Nuestro mercado abarca gran parte de América. <b>CcT</b> fue creada a inicios de Marzo de 2020 y hasta
+            la fecha llega a 20 países.</p>
+        <h2>Nuestra Misión</h2>
+        <p><b>CcT</b> ofrece a sus clientes tendencias basadas en la moda mundial y a su vez, equipamiento o accesorios especializados para natación a precios razonables. Por lo tanto si busca un estilo casual como un atuendo que lucir en la playa, Cuidado con el Tiburón es la mejor opción. Nuestra prioridad es la calidad del producto y la felicidad de nuestros clientes.</p>
+        </div>
+        <div class="stats">
+            <div class="graficos">
+                <img src="img/graficos1.png" alt="">
+            </div>
+            <div class="graficos">
+                <img src="img/graficos2.png" alt="">
+            </div>
+            <div class="graficos">
+                <img src="img/graficos3.png" alt="">
+            </div>
+        </div>
+    </section>
+    <!----Referencia--->
+    <section class="rfc">
+        <div class="f-lks">
+            <ul class="datos">
+                <li>Conceptualización de Servicios en la Nube</li>
+                <li>Sigfrido Didier Bojorquez Montes</li>
+                <li>221968625</li>
+                <li><a id="contact" href="mailto:sigfrido.bojorquez@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+            </ul>
+            
+        </div>
+
+        </section>
+
+    <!-----JS Menu ---->   
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function mostrarMenu(){
+            navLinks.style.right ="0";
+        }
+        function ocultarMenu(){
+            navLinks.style.right ="-12.5em";
+        }
+        
+    </script>
+</body>
+</html>
